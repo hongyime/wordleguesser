@@ -21,7 +21,7 @@ A Python CLI tool that helps solve Wordle puzzles by filtering a word list based
 
 ## Tech Stack
 - **Language**: Python 3.x
-- **Libraries**: `copy` (stdlib), `json` (stdlib), `operator.itemgetter` (stdlib)
+- **Libraries**: Python standard library (`json`, `pathlib`, `re`, `math`, `sys`)
 - **Data files**: `fivewords.txt` (word list), `freq_map.json` (frequency map)
 
 ## Architecture
@@ -59,9 +59,10 @@ wordleguesser/
 - Sorted descending by weight — common words appear first
 
 ### Interactive Loop
-- Runs indefinitely until user quits (Ctrl+C)
+- Runs until user quits (Ctrl+C or EOF); import does not start the loop
 - Each iteration: prompt for guessed words, green positions, yellow positions
-- Prints ranked results as `rank, word, weight`
+- Prints ranked results as `rank, word, weight`; malformed clues can be retried
+- Resolves bundled data beside the script, independently of the working directory
 
 ## Data / Config
 | File | Description |

@@ -1,5 +1,15 @@
 # AUDIT_LOG.md
 
+## 2026-09-10 — Wordle constraint regression review
+
+Confirmed that optional color defaults raised AttributeError and that the yellow
+membership filter accepted words missing required letters. Replaced repeated
+list removal with one candidate pass, added input checks, and moved the CLI
+behind a main guard. Bundled data paths are now independent of the working
+directory. Synthetic regressions cover the documented format; exact duplicate
+counts remain a documented format limitation. Current diagnosis and validation
+scope are in AUDIT.md.
+
 ## Reconnaissance - 20260524
 
 ### REPO_CONTEXT
