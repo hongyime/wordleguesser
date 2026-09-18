@@ -1,5 +1,6 @@
 # wordle-guesser-code
 
+**Live:** https://hongyime.github.io/wordleguesser/
 
 ![Project screenshot](./screenshot.png)
 
